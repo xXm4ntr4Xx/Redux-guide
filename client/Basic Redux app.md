@@ -26,7 +26,8 @@ React redux guide
   -we import the store<br/>
   -we wrap the App component with the Provider an we pass the store element as a prop
   
-<img width="461" alt="Screenshot 2022-04-15 at 12 23 50" src="https://user-images.githubusercontent.com/74420607/163565216-af3931b8-1dfb-4739-869d-47a0d790fe1c.png">
+<img width="460" alt="Screenshot 2022-04-15 at 12 31 07" src="https://user-images.githubusercontent.com/74420607/163565853-9cd0d7ba-2b31-4880-a4be-87116e1cdee6.png">
+
 
 <hr>
 
