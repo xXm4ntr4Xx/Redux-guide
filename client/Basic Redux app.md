@@ -16,18 +16,25 @@ React redux guide
   - const store = createStore(reducerFn)</br>
   -  we export default  the store
 
+<img width="550" alt="Screenshot 2022-04-15 at 12 08 07" src="https://user-images.githubusercontent.com/74420607/163564063-4b8f18f2-d9fb-4708-b1b6-97e0d29724b4.png">
 
-
-<img width="338" alt="Screenshot 2022-04-15 at 11 36 07" src="https://user-images.githubusercontent.com/74420607/163561279-2c2fdb3b-e9ec-4499-ba50-eb0e0866d6b6.png">
 
 <hr/>
 
-4.similar to context api we now go on index.js and :<br/>
+4.similar to the context api we now go on index.js and :<br/>
   -we import the Provider that wrap all the application<br/>
   -we import the store<br/>
   -we wrap the App component with the Provider an we pass the store element as a prop
   
-<img width="466" alt="Screenshot 2022-04-15 at 11 48 54" src="https://user-images.githubusercontent.com/74420607/163562398-52a98d37-f938-485e-a810-f4c354bb9fe3.png">
+<img width="461" alt="Screenshot 2022-04-15 at 12 23 50" src="https://user-images.githubusercontent.com/74420607/163565216-af3931b8-1dfb-4739-869d-47a0d790fe1c.png">
 
 <hr>
 
+5. We need : <br>
+  -import useSelector and useDispatch<br>
+  -create a variable with the useselector function that grab the counter <br>
+  -create a variable with the useDispatch to grab the different action from the reducerFn on store/index.js<br>
+  -create the different onClick function and call the different function
+  
+<img width="599" alt="Screenshot 2022-04-15 at 12 11 59" src="https://user-images.githubusercontent.com/74420607/163564392-c56caf38-ca28-4d88-82a9-72f9e37aca88.png">
+<hr>
