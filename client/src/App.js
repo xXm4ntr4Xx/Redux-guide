@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import{useSelector,useDispatch} from 'react-redux'
 
 function App() {
+
+  const counter = useSelector((state)=>state.counter)//we target the counter inside the reducerFn
+  const dispatch =useDispatch();
+
+
+  console.log(counter,'check the counter container')//counter = 10 (set as default value) 
+  
+  const increment =() =>{
+    dispatch({//check the action.type and update the state inside the redux store
+      type:'increment'
+    })
+  }
+
+  const decrement =()=>{
+    dispatch({//check the action and update the state inside the redux store
+      type:'decrement'
+    })
+  }
+
+  const AddBy =()=>{
+    dispatch({//check the action and update the state inside the redux store
+      type:'add',
+      payload:10
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Counter</h1>
+      <h2>{counter}</h2> {/* counter element*/}
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={AddBy}>Add Value</button>
     </div>
   );
 }
-
 export default App;

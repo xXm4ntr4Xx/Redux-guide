@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';//app wrapper
+import store from './store';//store the data we want to pass
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const hello = 'hello';
+
 root.render(
+  <Provider store={store} hello={hello}>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
